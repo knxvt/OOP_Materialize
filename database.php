@@ -21,8 +21,8 @@ class database{
 
     }
 
-    function input($nama,$alamat,$no_kamar,$email){
-        mysql_query("insert into user values('','$nama','$alamat','$no_kamar','$email')");
+    function input($nama,$alamat,$no_kamar,$email,$keterangan,$id_tamu){
+        mysql_query("insert into user values('','$nama','$alamat','$no_kamar','$email','$keterangan','$id_tamu')");
     }
 
     function hapus($id){
@@ -37,8 +37,8 @@ class database{
         return $hasil;
     }
 
-    function update($id,$nama,$alamat,$no_kamar,$email){
-        mysql_query("update user set nama='$nama', alamat='$alamat', no_kamar='$no_kamar', email='$email'  where id='$id'");
+    function update($id,$nama,$alamat,$no_kamar,$email,$keterangan){
+        mysql_query("update user set nama='$nama', alamat='$alamat', no_kamar='$no_kamar', email='$email', keterangan='$keterangan', id_tamu=$id_tamu',   where id='$id'");
     }
 
 }
